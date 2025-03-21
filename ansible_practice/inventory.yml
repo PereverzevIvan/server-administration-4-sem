@@ -1,5 +1,5 @@
 myhosts:
   hosts:
     srv:
-      ansible_host: 172.18.0.2
+      ansible_host: 172.21.0.2
       ansible_user: std

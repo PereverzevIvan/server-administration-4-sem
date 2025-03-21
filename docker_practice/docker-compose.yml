@@ -1,0 +1,32 @@
+# 1. Создать новую папку под проект
+# 2. Установить docker compose: sudo apt install docker-compose
+# 3. Создать этот docker-compose.yml
+# 4. Создать подпапку db
+# 5. Выполнить docker compose up -d
+# 6. Открыть в брОузере localhost:8080 — должна появиться веб-админка БД
+# 7. Войти в админку под юзером postgres и паролем example
+
+# Use postgres/example user/password credentials
+
+services:
+  db:
+    image: postgres
+    # set shared memory limit when using docker-compose
+    shm_size: 128mb
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: example
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+
+  front:
+    build: images/front
+    volumes:
+      - ./src:/usr/src
+    command:
+      - python3
+      - /usr/src/fetch_script.py

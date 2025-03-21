@@ -1,0 +1,4 @@
+services:
+  srv:
+    build: docker
+    hostname: srv

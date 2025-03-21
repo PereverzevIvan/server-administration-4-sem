@@ -1,0 +1,295 @@
+Текущий рабочий каталог: /home/ivan/Work/Политех/Servers/Laba 1
+====================================================================================================
+Текущий запущенный процесс:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ivan       30109  0.0  0.0   7660  5456 pts/1    S+   09:43   0:00 /bin/bash -e ./script.sh --tofile ./test.txt
+====================================================================================================
+Домашний каталог: /home/ivan
+====================================================================================================
+Информация об операционной системе:
+1) Название операционной системы: Arch Linux
+2) Версия ядра: Linux 6.8.4-zen1-1-zen
+====================================================================================================
+Доступные оболочки:
+/bin/sh
+/bin/bash
+/bin/rbash
+/usr/bin/sh
+/usr/bin/bash
+/usr/bin/rbash
+/usr/bin/git-shell
+/bin/zsh
+/usr/bin/zsh
+====================================================================================================
+Текущие пользователи, вошедшие в систему:
+ivan     tty2         2024-04-12 08:26 (:0)
+ivan     pts/0        2024-04-12 08:26 (:0)
+ivan     pts/2        2024-04-12 09:21 (:0)
+====================================================================================================
+На данный момент в системе работает 3 пользователей
+====================================================================================================
+Информация о диске:
+Файловая система Размер Использовано  Дост Использовано% Cмонтировано в
+dev                6,8G            0  6,8G            0% /dev
+run                6,8G         1,7M  6,8G            1% /run
+efivarfs           148K          59K   85K           41% /sys/firmware/efi/efivars
+/dev/nvme0n1p2     234G          81G  142G           37% /
+tmpfs              6,8G          43M  6,8G            1% /dev/shm
+tmpfs              6,8G          19M  6,8G            1% /tmp
+/dev/nvme0n1p1     381M         174M  207M           46% /boot
+tmpfs              1,4G          88K  1,4G            1% /run/user/1000
+====================================================================================================
+Информация о процессоре:
+Архитектура:                          x86_64
+CPU op-mode(s):                       32-bit, 64-bit
+Address sizes:                        43 bits physical, 48 bits virtual
+Порядок байт:                         Little Endian
+CPU(s):                               8
+On-line CPU(s) list:                  0-7
+ID прроизводителя:                    AuthenticAMD
+Имя модели:                           AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx
+Семейство ЦПУ:                        23
+Модель:                               24
+Thread(s) per core:                   2
+Ядер на сокет:                        4
+Сокетов:                              1
+Степпинг:                             1
+Frequency boost:                      enabled
+CPU(s) scaling MHz:                   121%
+CPU max MHz:                          2100,0000
+CPU min MHz:                          1400,0000
+BogoMIPS:                             4191,88
+
+Виртуализация:                        AMD-V
+L1d cache:                            128 KiB (4 instances)
+L1i cache:                            256 KiB (4 instances)
+L2 cache:                             2 MiB (4 instances)
+L3 cache:                             4 MiB (1 instance)
+NUMA node(s):                         1
+NUMA node0 CPU(s):                    0-7
+Vulnerability Gather data sampling:   Not affected
+Vulnerability Itlb multihit:          Not affected
+Vulnerability L1tf:                   Not affected
+Vulnerability Mds:                    Not affected
+Vulnerability Meltdown:               Not affected
+Vulnerability Mmio stale data:        Not affected
+Vulnerability Reg file data sampling: Not affected
+Vulnerability Retbleed:               Mitigation; untrained return thunk; SMT vulnerable
+Vulnerability Spec rstack overflow:   Mitigation; Safe RET
+Vulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:             Mitigation; Retpolines, IBPB conditional, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected
+Vulnerability Srbds:                  Not affected
+Vulnerability Tsx async abort:        Not affected
+====================================================================================================
+Информация о памяти: 
+               total        used        free      shared  buff/cache   available
+Mem:            13Gi       5,6Gi       5,5Gi       128Mi       2,9Gi       8,0Gi
+Swap:             0B          0B          0B
+Total:          13Gi       5,6Gi       5,5Gi
+====================================================================================================
+Информация о файловой системе:
+Файловая система Тип      1K-блоков Использовано  Доступно Использовано% Cмонтировано в
+dev              devtmpfs   7103136            0   7103136            0% /dev
+run              tmpfs      7123352         1724   7121628            1% /run
+efivarfs         efivarfs       148           59        85           41% /sys/firmware/efi/efivars
+/dev/nvme0n1p2   ext4     244639028     84142188 147997080           37% /
+tmpfs            tmpfs      7123352        43920   7079432            1% /dev/shm
+tmpfs            tmpfs      7123356        19428   7103928            1% /tmp
+/dev/nvme0n1p1   vfat        389360       177548    211812           46% /boot
+tmpfs            tmpfs      1424668           88   1424580            1% /run/user/1000
+====================================================================================================
+Установленные пакеты:
+akonadi-import-wizard 24.02.1-1
+ark 24.02.1-1
+base 3-2
+base-devel 1-1
+bc 1.07.1-4
+bluedevil 1:6.0.3-1
+bluez-utils 5.73-4
+breeze-gtk 6.0.3-1
+breeze-plymouth 6.0.3-1
+cantor 24.02.1-1
+cervisia 24.02.1-1
+chromium 123.0.6312.122-1
+colord-kde 24.02.1-1
+corectrl 1.4.0-3
+dhcpcd 10.0.6-1
+discord 0.0.49-1
+discover 6.0.3-1
+docker 1:26.0.0-1
+dolphin 24.02.1-1
+dolphin-plugins 24.02.1-1
+dqlite 1.16.4-1
+drkonqi 6.0.3-1
+efibootmgr 18-3
+elisa 24.02.1-1
+ffmpegthumbs 24.02.1-1
+filelight 24.02.1-1
+firefox 124.0.2-1
+flatpak-kcm 6.0.3-1
+gamemode 1.8.1-2
+git 2.44.0-1
+glad 2.0.5-1
+go 2:1.22.2-1
+grantlee-editor 24.02.1-1
+grub 2:2.12-2
+gtop 1.1.5-1
+gwenview 24.02.1-1
+isoimagewriter 24.02.1-1
+kamera 24.02.1-1
+kamoso 24.02.1-1
+kcharselect 24.02.1-1
+kclock 24.02.1-1
+kcolorchooser 24.02.1-1
+kcron 24.02.1-1
+kde-dev-scripts 24.02.1-1
+kde-dev-utils 24.02.1-1
+kde-gtk-config 6.0.3-2
+kde-inotify-survey 24.02.1-1
+kdebugsettings 24.02.1-1
+kdeconnect 24.02.1-1
+kdegraphics-thumbnailers 24.02.1-1
+kdenetwork-filesharing 24.02.1-1
+kdenlive 24.02.1-2
+kdepim-addons 24.02.1-1
+kdeplasma-addons 6.0.3-1
+kdesdk-kio 24.02.1-1
+kdesdk-thumbnailers 24.02.1-1
+kdf 24.02.1-1
+kdialog 24.02.1-1
+keysmith 24.02.1-1
+kfind 24.02.1-1
+kgamma 6.0.3-1
+kgpg 24.02.1-1
+khelpcenter 24.02.1-1
+kinfocenter 6.0.3-1
+kio-admin 24.02.1-1
+kio-gdrive 24.02.1-1
+kio-zeroconf 24.02.1-1
+kjournald 24.02.1-1
+kmag 24.02.1-1
+kmix 24.02.1-1
+kmousetool 24.02.1-1
+kmouth 24.02.1-1
+koko 24.02.1-1
+kolourpaint 24.02.1-1
+kompare 24.02.1-1
+konsole 24.02.1-1
+konversation 24.02.1-1
+korganizer 24.02.1-1
+krecorder 24.02.1-2
+krfb 24.02.1-1
+krita 5.2.2-8
+kscreen 6.0.3-1
+ksshaskpass 6.0.3-1
+ksystemlog 24.02.1-1
+ktouch 24.02.1-1
+kwallet-pam 6.0.3-1
+kwalletmanager 24.02.1-1
+kweather 24.02.1-1
+kwrited 6.0.3-1
+lib32-gdk-pixbuf2 2.42.10-2
+lib32-giflib 5.2.2-1
+lib32-gnutls 3.8.4-1
+lib32-gst-plugins-base 1.24.1-1
+lib32-libjpeg-turbo 3.0.2-2
+lib32-libpng 1.6.43-1
+lib32-libva 2.20.0-1
+lib32-libva-mesa-driver 1:24.0.4-2
+lib32-libxcomposite 0.4.6-1
+lib32-libxinerama 1.1.5-1
+lib32-libxslt 1.1.39-1
+lib32-ocl-icd 2.3.2-1
+lib32-openal 1.23.1-1
+lib32-v4l-utils 1.26.1-1
+lib32-vkd3d 1.10-1
+lib32-vulkan-radeon 1:24.0.4-2
+libreoffice-still 7.6.6-2
+libreoffice-still-ru 7.6.6-1
+libva-mesa-driver 1:24.0.4-2
+linux-firmware 20240409.1addd7dc-1
+linux-zen 6.8.4.zen1-1
+lokalize 24.02.1-1
+man-db 2.12.1-1
+mangohud 0.7.1-1
+markdownpart 24.02.1-1
+micro 2.0.13-1
+mpv 1:0.37.0-3
+neofetch 7.1.0-2
+nodejs 21.7.2-1
+npm 10.5.2-1
+obs-studio 30.1.1-1
+obsidian 1.5.12-1
+okular 24.02.1-1
+openssh 9.7p1-1
+oxygen 6.0.3-1
+oxygen-sounds 6.0.3-1
+packagekit-qt5 1.1.1-1
+packagekit-qt6 1.1.1-1
+papirus-icon-theme 20240201-1
+partitionmanager 24.02.1-1
+pavucontrol 1:5.0+r66+gc330506-1
+pim-data-exporter 24.02.1-1
+pim-sieve-editor 24.02.1-1
+plasma-browser-integration 6.0.3-1
+plasma-desktop 6.0.3-1
+plasma-disks 6.0.3-1
+plasma-firewall 6.0.3-1
+plasma-nm 6.0.3-1
+plasma-pa 6.0.3-1
+plasma-sdk 6.0.3-1
+plasma-systemmonitor 6.0.3-1
+plasma-thunderbolt 6.0.3-1
+plasma-vault 6.0.3-1
+plasma-welcome 6.0.3-1
+plasma-workspace-wallpapers 6.0.3-1
+plymouth-kcm 6.0.3-1
+postgresql 16.2-1
+power-profiles-daemon 0.21-1
+poxml 24.02.1-1
+print-manager 1:6.0.3-1
+python-pip 24.0-1
+python38 3.8.19-1
+qbittorrent 4.6.4-1
+sddm 0.21.0-4
+sddm-kcm 6.0.3-1
+skanlite 24.02.1-1
+skanpage 24.02.1-1
+spectacle 24.02.1-1
+sshfs 3.7.3-1
+steam 1.0.0.79-1
+sudo 1.9.15.p5-1
+svgpart 24.02.1-1
+sweeper 24.02.1-1
+telegram-desktop 4.16.5-1
+tree 2.1.1-1
+ttf-ms-fonts 2.0-12
+unrar 1:7.0.7-1
+unzip 6.0-20
+visual-studio-code-bin 1.88.0-1
+vkd3d 1.10-1
+vulkan-radeon 1:24.0.4-2
+wacomtablet 6.0.3-1
+wget 1.24.5-1
+wine 9.5-1
+wine-gecko 2.47.4-1
+wine-mono 9.0.0-1
+winetricks 20240105-1
+xf86-video-amdgpu 23.0.0-2
+xfce4-terminal 1.1.3-1
+xorg-server 21.1.12-1
+yay 12.3.5-1
+zsh 5.9-5
+httpdirfs
+httpdirfs-debug
+httpfs2-2gbplus
+httpfs2-2gbplus-debug
+python38
+python38-debug
+ttf-ms-fonts
+visual-studio-code-bin
+visual-studio-code-bin-debug
+yay
+yay-debug
+====================================================================================================

@@ -1,0 +1,9 @@
+services:
+  angie:
+    image: docker.angie.software/angie:latest
+    hostname: angie
+    ports:
+      - 8090:80
+    volumes:
+    - ./www:/usr/share/angie/html:ro
+    - ./conf/angie/:/etc/angie:ro

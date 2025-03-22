@@ -2,7 +2,7 @@
 
 ## Задание 1 - Bash-скрипты
 
-Решить задачи с ( данного сайта )[https://www.emertxe.com/embedded-systems/linux-systems/ls-assignments/]:
+Решить задачи с [данного сайта](https://www.emertxe.com/embedded-systems/linux-systems/ls-assignments/):
 
 1. А2 - построить пирамиду из чисел
 2. А5 - сложение двух действительных чисел с помощью команды bc

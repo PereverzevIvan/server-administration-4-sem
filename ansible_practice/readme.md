@@ -7,18 +7,11 @@
    ```
 3. Переходим в созданную папку
 4. Установить ansible внутри заранее созданного виртуального окружения python: `pip install ansible`
-5. Создаем файл `inventory.yml`:
-   ```yaml
-   svr:
-   	hosts:
-   		std_001:
-   			ansible_host: std-001
-   ```
-6. Устанавливаем образ Ubuntu для докера:
+5. Устанавливаем образ Ubuntu для докера:
    ```sh
    docker pull ubuntu
    ```
-7. Создаем новую папку `docker` и в ней создаем новый докер-файл :
+6. Создаем новую папку `docker` и в ней создаем новый докер-файл :
 
    ```dockerfile
    FROM ubuntu
@@ -37,34 +30,34 @@
    CMD ["/usr/sbin/sshd", "-D"]
    ```
 
-8. Создаем новый `docker-compose.yml`:
+7. Создаем новый `docker-compose.yml`:
    ```yml
    services:
      srv:
        build: docker
        hostname: srv
    ```
-9. Поднимаем контейнер:
+8. Поднимаем контейнер:
    ```sh
    docker compose up -d
    ```
-10. Узнаем его IP адрес для внесения в inventory.yml:
+9. Узнаем его IP адрес для внесения в inventory.yml:
+   ```sh
+   docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ansible_practice-srv-1
+   ```
+10. Подключиться к терминалу созданного контейнера через SSH можно с помощью следующей команды (пароль: std) (ip-может отличаться):
     ```sh
-    docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ansible_practice-srv-1
+    ssh std@<ip контейнера>
     ```
-11. Подключиться к терминалу созданного контейнера через SSH можно с помощью следующей команды (пароль: std) (ip-может отличаться):
-    ```sh
-    ssh std@172.19.0.2
-    ```
-12. Далее нужно вернуться к папке ansible и создаем там новый файл `inventory.yml`:
+11. Далее нужно вернуться к папке ansible и создать там новый файл `inventory.yml`:
     ```yml
     myhosts:
-    	hosts:
-    		srv:
-    			ansible_host: 172.19.0.2
-    			ansible_user: std
+      hosts:
+        srv:
+          ansible_host: <ip контейнера>
+          ansible_user: std
     ```
-13. Далее нужно создать новый файл `playbook.yml`:
+12. Далее нужно создать новый файл `playbook.yml`:
 
     ```yml
     - name: My first play
@@ -78,16 +71,16 @@
             msg: Hello world
     ```
 
-14. Нужно установить пакет `sshpass` для того, чтобы можно было не вводить пароль при попытке подключения.
-15. Далее для проверки пишем команду:
+13. Нужно установить пакет `sshpass` для того, чтобы можно было не вводить пароль при попытке подключения.
+14. Далее для проверки пишем команду:
 
     ```sh
     ansible-playbook -i inventory.yml --ask-pass playbook.yml
     ```
 
-16. Далее переименуем файл playbook.yml в test_playbook.yml
-17. Далее создаем серию каталогов `./roles/common/tasks`
-18. Там создаем файл `main.yml`:
+15. Далее переименуем файл playbook.yml в test_playbook.yml
+16. Далее создаем серию каталогов `./roles/common/tasks`
+17. Там создаем файл `main.yml`:
 
     ```yaml
     - name: Install packages
@@ -159,9 +152,9 @@
 
     ```
 
-19. Для корректной работы стоит добавить в ту же папку файл с уже настроенной темой powerlevel10k. Он должен называться `.p10k.zsh`
-20. Возможно для успешного подключения к серверу нужно будет выполнить команду: `ssh-keygen -f /home/username/.ssh/known_hosts -R <ip контейнера>`
-21. Создаем в корневой папке файл `playbook-common.yml`:
+18. Для корректной работы стоит добавить в ту же папку файл с уже настроенной темой powerlevel10k. Он должен называться `.p10k.zsh`
+19. Возможно для успешного подключения к серверу нужно будет выполнить команду: `ssh-keygen -f /home/username/.ssh/known_hosts -R <ip контейнера>`
+20. Создаем в корневой папке файл `playbook-common.yml`:
 
     ```yml
     - hosts: myhosts
@@ -169,11 +162,11 @@
         - common
     ```
 
-22. После этого нужно применить созданные playbook:
+21. После этого нужно применить созданные playbook:
 
     ```sh
     ansible-playbook -i inventory.yml --ask-pass --ask-become-pass playbook-common.yml
     ```
 
-23. Если все было сделано правильно, то при первом подключении к терминалу созданного контейнера после настройки будет получен вот такой результат:
+22. Если все было сделано правильно, то при первом подключении к терминалу созданного контейнера после настройки будет получен вот такой результат:
     ![Результат настройки через ansible](./images/result.png)
